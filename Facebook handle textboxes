@@ -1,0 +1,31 @@
+package textboxesdemo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class facebook {
+
+	public static void main(String[] args) throws InterruptedException {
+   System.setProperty("webdriver.chrome.driver", "C:\\Users\\sai mahesh\\Downloads\\web browsers\\chromedriver.exe");
+	WebDriver driver = new ChromeDriver();	
+	driver.get("https:\\www.facebook.com");		
+	driver.manage().window().maximize();
+	Thread.sleep(3000);	
+	WebElement emailField = driver.findElement(By.id("email"));
+    emailField.sendKeys("saiym9542@gmail.com");	
+     WebElement passwordField = driver.findElement(By.id("pass"));
+     passwordField.sendKeys("12345678");	
+     WebElement loginButton = driver.findElement(By.name("login"));
+    loginButton.click();	
+    Thread.sleep(6000);
+    driver.close();
+	      
+	
+
+		
+		
+	}
+
+}
